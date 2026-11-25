@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 20% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 20% 14%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 14% 42%;
+    --border: 214 20% 89%;
+    --primary: 24 83% 48%; /* #e8730c - orange IvoireMap */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 65% 31%; /* #138a4a - vert waren */
+    --secondary-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.6rem;
+  }
+
+  [data-theme="dark"] {
+    --background: 222 24% 9%;
+    --foreground: 210 20% 96%;
+    --card: 222 22% 12%;
+    --card-foreground: 210 20% 96%;
+    --muted: 222 18% 16%;
+    --muted-foreground: 215 14% 65%;
+    --border: 222 16% 20%;
+    --primary: 24 83% 55%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 150 55% 42%;
+    --secondary-foreground: 0 0% 8%;
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 0 0% 8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+/* Le conteneur Leaflet doit avoir une hauteur explicite pour s'afficher */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: hsl(var(--muted));
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+}

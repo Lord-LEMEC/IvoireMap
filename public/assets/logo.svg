@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="IvoireMap">
+  <defs>
+    <path id="lg-shape" d="M256 40C150 40 68 122 68 224c0 118 150 212 176 238 6 6 18 6 24 0 26-26 176-120 176-238C444 122 362 40 256 40Z"/>
+    <clipPath id="lg-pin"><use href="#lg-shape"/></clipPath>
+    <linearGradient id="lg-o" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F28A2A"/><stop offset="1" stop-color="#E8730C"/></linearGradient>
+    <linearGradient id="lg-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1B9A55"/><stop offset="1" stop-color="#138A4A"/></linearGradient>
+    <filter id="lg-sh" x="-20%" y="-10%" width="140%" height="135%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".22"/></filter>
+  </defs>
+  <use href="#lg-shape" fill="#fff" stroke="#fff" stroke-width="18" stroke-linejoin="round" filter="url(#lg-sh)"/>
+  <g clip-path="url(#lg-pin)">
+    <rect x="60" y="30" width="140" height="450" fill="url(#lg-o)"/>
+    <rect x="196" y="30" width="120" height="450" fill="#fff"/>
+    <rect x="312" y="30" width="140" height="450" fill="url(#lg-g)"/>
+    <path d="M60 30h140L60 170Z" fill="#fff" opacity=".16"/>
+    <path d="M452 30H312l140 140Z" fill="#fff" opacity=".16"/>
+  </g>
+  <circle cx="256" cy="212" r="84" fill="#fff"/>
+  <circle cx="256" cy="212" r="76" fill="#1D2A3F"/>
+  <path d="M256 150l38 80-38-14-38 14Z" fill="#FFB400" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="232" y="238" width="48" height="30" rx="9" fill="#fff"/>
+  <rect x="238" y="243" width="36" height="9" rx="2.5" fill="#1D2A3F" opacity=".18"/>
+  <circle cx="244" cy="259" r="3.2" fill="#E8730C"/><circle cx="268" cy="259" r="3.2" fill="#138A4A"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Marche">
+  <ellipse cx="32" cy="58" rx="14" ry="2" fill="#000" opacity=".14"/>
+  <g fill="none" stroke="#6B7280" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M33 21 30 36"/>
+    <path d="M30 36 22.5 45.5 16 54"/>
+    <path d="M30 36 37.5 44 38.5 55.5"/>
+    <path d="M32.5 23.5 24.5 30 21.5 37"/>
+    <path d="M32.5 23.5 40.5 29 47 27.5"/>
+  </g>
+  <circle cx="34.5" cy="12" r="5.6" fill="#6B7280"/>
+</svg>
