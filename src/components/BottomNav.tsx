@@ -1,21 +1,20 @@
 "use client";
 
-import { Map, Route, BookOpen, Heart } from "lucide-react";
+import { Map, Route, MessageSquarePlus } from "lucide-react";
 import { useIvoireStore } from "@/store/useIvoireStore";
 import { cn } from "@/lib/utils";
 
 const TABS = [
   { id: "map", label: "Carte", icon: Map },
   { id: "routes", label: "Itineraires", icon: Route },
-  { id: "guide", label: "Guide", icon: BookOpen },
-  { id: "favorites", label: "Favoris", icon: Heart },
+  { id: "suggest", label: "Proposer", icon: MessageSquarePlus },
 ] as const;
 
 export function BottomNav() {
   const { activeTab, setActiveTab } = useIvoireStore();
 
   return (
-    <nav className="grid grid-cols-4 border-t border-border bg-background">
+    <nav className="grid grid-cols-3 border-t border-border bg-background">
       {TABS.map(({ id, label, icon: Icon }) => (
         <button
           key={id}

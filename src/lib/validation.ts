@@ -48,3 +48,18 @@ export const authSchema = z.object({
 });
 
 export type AuthInput = z.infer<typeof authSchema>;
+
+/** Formulaire "Proposer un trajet manquant" envoye a l'administrateur */
+export const routeSuggestionSchema = z.object({
+  departure: z.string().min(2, "Indiquez le lieu de depart"),
+  destination: z.string().min(2, "Indiquez la destination"),
+  transportModes: z.string().max(200, "200 caracteres maximum").optional(),
+  estimatedPrice: z.string().max(100, "100 caracteres maximum").optional(),
+  processDescription: z
+    .string()
+    .min(15, "Decrivez le processus pour y aller (15 caracteres minimum)")
+    .max(1500, "Description trop longue (1500 caracteres maximum)"),
+  contact: z.string().max(120, "120 caracteres maximum").optional(),
+});
+
+export type RouteSuggestionInput = z.infer<typeof routeSuggestionSchema>;

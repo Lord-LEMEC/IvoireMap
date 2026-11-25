@@ -11,8 +11,7 @@ import { SearchPanel } from "@/components/search/SearchPanel";
 import { ReportPlaceDialog } from "@/components/search/ReportPlaceDialog";
 import { RoutePanel } from "@/components/route/RoutePanel";
 import { NavigationHud } from "@/components/navigation/NavigationHud";
-import { TransportGuideView } from "@/components/guide/TransportGuideView";
-import { FavoritesView } from "@/components/favorites/FavoritesView";
+import { SuggestRouteView } from "@/components/suggest/SuggestRouteView";
 import { BottomNav } from "@/components/BottomNav";
 import type { Place, TransportEdge } from "@/lib/types";
 
@@ -209,15 +208,9 @@ export function AppShell({ initialPlaces, initialEdges, dataSource }: AppShellPr
           </div>
         )}
 
-        {activeTab === "guide" && (
+        {activeTab === "suggest" && (
           <div className="h-full overflow-y-auto">
-            <TransportGuideView />
-          </div>
-        )}
-
-        {activeTab === "favorites" && (
-          <div className="h-full overflow-y-auto">
-            <FavoritesView />
+            <SuggestRouteView />
           </div>
         )}
       </main>

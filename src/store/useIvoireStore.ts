@@ -31,7 +31,7 @@ interface IvoireState {
   selectRoute: (index: number) => void;
 
   // Onglet actif (bas de page, equivalent mobile de l'ancien bottom-nav)
-  activeTab: "map" | "routes" | "guide" | "favorites";
+  activeTab: "map" | "routes" | "suggest";
   setActiveTab: (tab: IvoireState["activeTab"]) => void;
 
   // Navigation / simulation en cours

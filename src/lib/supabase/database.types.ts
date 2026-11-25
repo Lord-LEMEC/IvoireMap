@@ -106,6 +106,28 @@ export interface Database {
         Insert: { place_id: string; user_id: string; rating: number; comment?: string | null };
         Update: Partial<Database["public"]["Tables"]["reviews"]["Row"]>;
       };
+      route_suggestions: {
+        Row: {
+          id: string;
+          departure: string;
+          destination: string;
+          transport_modes: string | null;
+          estimated_price: string | null;
+          process_description: string;
+          contact: string | null;
+          status: "nouveau" | "en_cours" | "ajoute" | "rejete";
+          created_at: string;
+        };
+        Insert: {
+          departure: string;
+          destination: string;
+          transport_modes?: string | null;
+          estimated_price?: string | null;
+          process_description: string;
+          contact?: string | null;
+        };
+        Update: Partial<Database["public"]["Tables"]["route_suggestions"]["Row"]>;
+      };
     };
   };
 }
